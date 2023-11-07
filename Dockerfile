@@ -1,1 +1,1 @@
-from python
+FROM python

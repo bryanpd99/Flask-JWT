@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Login de registro{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block main %}
+  <h1>Login de usuario</h1>
+<form action="{{url_for('auth.get_token')}}" method="post">
+  <fieldset>
+    <label >
+        Usuario: 
+        <input type="text" name="username" id="username" placeholder="ingrese su username"><br>
+    </label>
+    <label >
+        Contraseña: 
+        <input type="password" name="password" id="password" placeholder="Ingrese su contrasenia" > <br>
+    </label>
+    <button id="enviar">Login</button>
+  </fieldset>
+</form>
+{% endblock %}
+<script src="../js/login.js"></script>
